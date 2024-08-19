@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
+import InputMask from 'react-input-mask';
 import { TextField, Button, Grid, Container, Typography, MenuItem, Alert, Checkbox, FormControlLabel } from '@mui/material';
 import api from '../services/api';
 import styles from './FuncionarioForm.module.css';
@@ -17,7 +18,7 @@ const empresas = {
 };
 
 const FuncionarioForm = () => {
-  const { register, handleSubmit, watch, setValue, control, formState: { errors } } = useForm({
+  const { register, handleSubmit, watch, setValue, control, formState: { errors }, reset } = useForm({
     defaultValues: {
       nome: '',
       cpf: '',
@@ -46,6 +47,15 @@ const FuncionarioForm = () => {
     }
   }, [empresaSelecionada, setValue]);
 
+  useEffect(() => {
+    if (submissionStatus) {
+      const timer = setTimeout(() => {
+        setSubmissionStatus(null); 
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [submissionStatus]);
+
   const handleBeneficioChange = (event) => {
     const { value, checked } = event.target;
     if (checked) {
@@ -70,6 +80,7 @@ const FuncionarioForm = () => {
       const response = await api.post('/incluirFuncionario', data);
       console.log(response.data);
       setSubmissionStatus('success');
+      reset();
     } catch (error) {
       console.error('Erro ao enviar dados:', error);
       setSubmissionStatus('error');
@@ -96,6 +107,11 @@ const FuncionarioForm = () => {
             />
           </Grid>
           <Grid item xs={12}>
+          <InputMask
+              mask="999.999.999-99"
+              {...register('cpf', { required: 'CPF é obrigatório' })}
+            >
+              {() => (
             <TextField
               label="CPF"
               fullWidth
@@ -104,6 +120,8 @@ const FuncionarioForm = () => {
               error={!!errors.cpf}
               helperText={errors.cpf?.message}
             />
+          )}
+            </InputMask>  
           </Grid>
           <Grid item xs={12}>
             <TextField

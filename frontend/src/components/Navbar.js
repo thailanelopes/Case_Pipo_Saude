@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import logo from '../logo.jpg';
+import logo from '../logoarr.png';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {

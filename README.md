@@ -14,6 +14,11 @@
 
 Para implementar o case específico optei por utilizar a  MERN Stack (MongoDB, Express, React, Node.js).
 
+- 1. MongoDB: Um banco de dados NoSQL que armazena dados em documentos JSON flexíveis.
+- 2. Express.js: Um framework web para Node.js, usado para construir a lógica de back-end e gerenciar rotas e servidores.
+- 3. React.js: Uma biblioteca JavaScript usada para criar interfaces de usuário dinâmicas e interativas no front-end.
+- 4. Node.js: Um ambiente de execução JavaScript no lado do servidor, que permite que o JavaScript seja usado para programar o back-end.
+
 - Backend: API para gerenciar a inclusão dos funcionários nos benefícios.
 - Frontend: Interface para o RH da empresa inserir os dados dos funcionários.
 - Banco de Dados: Armazenar dados dos funcionários e benefícios.
@@ -86,3 +91,34 @@ Para implementar o case específico optei por utilizar a  MERN Stack (MongoDB, E
 #### Para rodar o frontend:
 
 - npm start
+
+
+# MELHORIAS FUTURAS:
+
+## Tela de vizualização:
+
+Implementar tela de visualização, para ver os dados gravados.
+
+## Upload de Documentos:
+
+Permitir que os usuários façam upload de documentos necessários (como RG, CPF, comprovante de residência) diretamente no formulário de inclusão de funcionários.
+
+## Painel de Administração:
+
+Desenvolver um painel administrativo onde os RHs possam gerenciar benefícios, funcionários, e visualizar relatórios com métricas importantes.
+
+## Notificações Automáticas:
+
+Implementar um sistema de notificações que avise os usuários e o RH sobre a inclusão de novos funcionários, prazos de benefícios, ou qualquer outro evento importante.
+
+## Integração com APIs de Parceiros:
+
+Integrar a aplicação com as APIs dos parceiros de benefícios (como planos de saúde e odontológicos) para automatizar ainda mais o processo de inclusão e atualização de dados.
+
+## Acessibilidade e Responsividade:
+
+- Melhorar a acessibilidade da aplicação, garantindo que pessoas com deficiência possam utilizá-la sem dificuldades.
+
+## Internacionalização (i18n):
+
+- Preparar a aplicação para suportar múltiplos idiomas, considerando a possibilidade de a Pipo Saúde expandir suas operações para outros países.

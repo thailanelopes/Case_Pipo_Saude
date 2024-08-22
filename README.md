@@ -1,5 +1,9 @@
 # Case_Pipo_Saude
 
+## Arquitetura.
+
+![Captura de Tela 1](arquitetura/arquitetura.png)
+
 
 ## Entendendo o Problema.
 

@@ -4,6 +4,10 @@
 
 ![Captura de Tela 1](arquitetura/arquitetura.png)
 
+- *Arquitetura Centralizada:* Todo o código backend (rotas, controladores, modelos) está dentro de uma única aplicação Node.js/Express. A aplicação lida com várias funcionalidades, como gerenciamento de funcionários e benefícios, dentro de um único código base.
+*Banco de Dados Centralizado:* A aplicação se conecta a um único banco de dados MongoDB, onde todas as informações são armazenadas.
+*Implantação Unificada:* Todo o sistema é implantado como uma única unidade. Isso significa que quando e feita uma atualização ou correção de bug, todo o sistema é atualizado de uma vez.
+
 
 ## Entendendo o Problema.
 
